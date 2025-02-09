@@ -1,0 +1,87 @@
+/* Calculator.css */
+.calculator {
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 400px; /* Set a maximum width */
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .display {
+    background-color: #f0f0f0;
+    padding: 15px;
+    font-size: 24px;
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 8px; /* Add spacing between buttons */
+    padding: 8px; /* Add padding around buttons */
+  }
+  
+  button {
+    padding: 15px;
+    font-size: 18px;
+    border: none; /* Remove default button border */
+    background-color: #eee;
+    color:orange;
+    cursor: pointer;
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.2s;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  .operator {
+    background-color: #f2c14e;
+    color: white;
+  }
+  
+  .operator:hover {
+    background-color: #e6a82d;
+  }
+  
+  .clear {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .clear:hover {
+    background-color: #c9302c;
+  }
+  
+  .equal {
+    background-color: #5cb85c;
+    color: white;
+    grid-column: span 2;
+  }
+  
+  .equal:hover {
+    background-color: #4cae4c;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 350px) { /* Adjust breakpoint as needed */
+    .calculator {
+      width: 95%; /* Make calculator take up more width on small screens */
+    }
+  
+    button {
+      font-size: 16px; /* Slightly smaller font on small screens */
+      padding: 12px; /* Slightly smaller padding */
+    }
+  
+    .display {
+      font-size: 20px; /* Slightly smaller display font */
+    }
+  }

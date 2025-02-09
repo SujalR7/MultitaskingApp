@@ -1,0 +1,108 @@
+/* CowsAndBulls.css */
+.game-container {
+    margin: 2rem auto; /* Center the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    padding: 20px;
+    background-color:white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Occupy most of the screen on smaller devices */
+    max-width: 600px; /* Limit the maximum width on larger screens */
+}
+
+.Cbh1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem; /* Responsive font size */
+}
+
+.message {
+    margin-bottom: 10px;
+    margin-top:2rem;
+    color: #555;
+    font-size: 1rem; /* Responsive font size */
+}
+
+.win-message {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* Responsive font size */
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically on smaller screens */
+    align-items: center; /* Center the items */
+    margin-bottom: 20px;
+    width: 100%; /* Make input area occupy full width */
+}
+
+.guess-input {
+    margin:2rem 2rem 2rem 2rem;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px; /* Add margin between input and button */
+    width: 100%; /* Make input occupy full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.submit-button,
+.new-game-button {
+    margin-top: 1rem; /* Adjust margin as needed */
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 90%; /* Make buttons occupy full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.submit-button:hover,
+.new-game-button:hover {
+    background-color: #0056b3;
+}
+
+.guesses-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%; /* Make list occupy full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.guess-item {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem; /* Responsive font size */
+    color:black;
+}
+
+.guess-item:last-child {
+    border-bottom: none;
+}
+
+/* Media query for smaller screens (e.g., tablets and phones) */
+@media (max-width: 768px) {
+    .game-container {
+        width: 95%; /* Further reduce width on very small screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .Cbh1 {
+        font-size: 1.2rem; /* Smaller heading */
+    }
+
+    .message,
+    .win-message,
+    .guess-item {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+}

@@ -1,0 +1,89 @@
+/* styles.css */
+.notes-app {
+    font-family: sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Ensure full viewport height */
+  }
+  
+  .note-input {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column; /* Stack textarea and button */
+  }
+  
+  
+  .note-input textarea {
+    flex-grow: 1; /* Textarea takes up available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px; /* Space between textarea and button */
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+  .note-input button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .note-list {
+    display: grid; /* Use grid for responsive layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Spacing between notes */
+  }
+  
+  .note {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column; /* Content stacks vertically */
+  }
+  
+  .note p {
+    flex-grow: 1; /* Text takes up available space */
+    margin-bottom: 10px;
+    white-space: pre-wrap; /* Handle line breaks and whitespace */
+  }
+  
+  .note-actions {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: auto; /* Push buttons to the bottom */
+  }
+  
+  .note-actions button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .note-actions button:first-child { /* Edit button style */
+    width:3rem;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .note-actions button:last-child { /* Delete button style */
+    background-color: #dc3545;
+    color: white;
+  }
+  button{
+    width:3.5rem;
+    height: 2.5rem;
+  }
+  /* Media Queries for smaller screens (example) */
+  @media (max-width: 600px) {
+    .note-list {
+      grid-template-columns: 1fr; /* Single column on small screens */
+    }
+  
+    .note-input {
+      flex-direction: column; /* Vertical layout on small screens */
+    }
+  }
